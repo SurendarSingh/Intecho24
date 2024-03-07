@@ -140,12 +140,12 @@ const Events = () => {
               className='w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg'
             >
               <Image
-                className='h-80 w-full object-cover object-center'
+                className='w-full object-cover object-center'
                 src={event.image}
-                alt='avatar'
+                alt={event.title}
                 priority
-                width={300}
-                height={200}
+                width={1000}
+                height={1000}
               />
 
               <div className='flex items-center bg-gray-900 px-6 py-3'>
@@ -270,12 +270,12 @@ const Events = () => {
               className='w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg'
             >
               <Image
-                className='h-80 w-full object-cover object-center'
+                className='w-full object-cover object-center'
                 src={event.image}
-                alt='avatar'
+                alt={event.title}
                 priority
-                width={300}
-                height={200}
+                width={1000}
+                height={1000}
               />
 
               <div className='flex items-center bg-gray-900 px-6 py-3'>
@@ -346,12 +346,12 @@ const Events = () => {
               className='w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg'
             >
               <Image
-                className='h-80 w-full object-cover object-center'
+                className='w-full object-cover object-center'
                 src={event.image}
-                alt='avatar'
+                alt={event.title}
                 priority
-                width={300}
-                height={200}
+                width={1000}
+                height={1000}
               />
 
               <div className='flex items-center bg-gray-900 px-6 py-3'>
