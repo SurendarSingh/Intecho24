@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import OnClickButton from './OnClickButton';
+import ReadMore from './ReadMore';
 
 const TechnicalEvents = [
   {
@@ -173,9 +174,7 @@ const Events = () => {
                   {event.title}
                 </h1>
 
-                <p className='py-2 text-gray-700'>
-                  {event.description.substring(0, 100)}...
-                </p>
+                <ReadMore content={event.description} />
 
                 <div className='my-4 flex justify-between'>
                   <div className='flex items-center text-gray-700'>
@@ -289,9 +288,7 @@ const Events = () => {
                   {event.title}
                 </h1>
 
-                <p className='py-2 text-gray-700'>
-                  {event.description.substring(0, 100)}...
-                </p>
+                <ReadMore content={event.description} />
 
                 <div className='my-4 flex justify-between'>
                   <div className='flex items-center text-gray-700'>
@@ -365,9 +362,7 @@ const Events = () => {
                   {event.title}
                 </h1>
 
-                <p className='py-2 text-gray-700'>
-                  {event.description.substring(0, 100)}...
-                </p>
+                <ReadMore content={event.description} />
 
                 <div className='my-4 flex justify-between'>
                   <div className='flex items-center text-gray-700'>
