@@ -30,17 +30,24 @@ const Hero = () => {
   return (
     <div className='pattern h-screen max-h-[50rem] bg-slate-900'>
       <div className='container mx-auto px-6'>
-        <nav className='flex flex-col py-6 sm:flex-row sm:items-center sm:justify-between'>
+        <nav className='flex flex-row items-center justify-between py-6'>
           <Image
-            className='h-6 w-auto sm:h-24'
+            className='h-16 w-auto sm:h-24'
             src='/annauniv.png'
             alt='annauniv'
             width={100}
             height={100}
           />
           <Image
-            className='h-6 w-auto sm:h-24'
-            src='/mit75.jpeg'
+            className='h-16 w-auto sm:h-24'
+            src='/iea.png'
+            alt='iea'
+            width={100}
+            height={100}
+          />
+          <Image
+            className='h-16 w-auto sm:h-24'
+            src='/mit75.png'
             alt='mit75'
             width={100}
             height={100}
