@@ -9,18 +9,20 @@ const ContactForm = () => {
   async function handleSubmit(e: any) {
     setIsSubmitting(true);
     e.preventDefault();
+    const formData = new FormData(e.target);
+
+    formData.append('access_key', 'cdeeb002-da92-48e3-b1c6-858c90ef6dfc');
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
-      body: JSON.stringify({
-        access_key: 'cdeeb002-da92-48e3-b1c6-858c90ef6dfc',
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
-      }),
+      body: json,
     });
     const result = await response.json();
     if (result.success) {
@@ -37,7 +39,7 @@ const ContactForm = () => {
         <label className='mb-2 block text-sm text-gray-600'>Name</label>
         <input
           type='text'
-          name='name'
+          name='Name'
           required
           placeholder='Your name'
           className='mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-40'
@@ -50,7 +52,7 @@ const ContactForm = () => {
         </label>
         <input
           type='email'
-          name='email'
+          name='Email'
           required
           placeholder='name@gmail.com'
           className='mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-40'
@@ -62,7 +64,7 @@ const ContactForm = () => {
         <textarea
           rows={3}
           className='mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-40'
-          name='message'
+          name='Message'
           required
           placeholder='Enter Message'
         ></textarea>
@@ -71,7 +73,7 @@ const ContactForm = () => {
       <button
         type='submit'
         disabled={isSubmitting}
-        className='mt-6 w-full transform rounded-md bg-blue-500 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50'
+        className='mt-6 w-full transform rounded-md bg-blue-700 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 disabled:bg-blue-500'
       >
         {isSubmitting ? 'Sending Message...' : 'Send Message'}
       </button>
