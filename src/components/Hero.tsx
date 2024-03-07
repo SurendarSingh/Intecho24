@@ -29,14 +29,19 @@ const Hero = () => {
         />
       </nav>
 
-      <div className='my-auto flex flex-col items-center justify-center space-y-5 px-4 py-12 text-center md:px-8'>
+      <Countdown />
+
+      <div className='my-auto flex flex-col items-center justify-center space-y-5 px-4 pb-20 text-center md:px-8'>
         <div className='flex w-full flex-col items-center justify-center overflow-hidden'>
-          <h1 className='bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-6xl font-extrabold uppercase text-transparent md:text-9xl'>
-            Intecho 2024
-          </h1>
+          <Image
+            src={'/intechoLogo-1.svg'}
+            alt='Intecho Logo'
+            width={1000}
+            height={500}
+          />
         </div>
 
-        <div className='mx-auto flex max-w-4xl flex-col items-center justify-center pt-4'>
+        <div className='mx-auto flex max-w-4xl flex-col items-center justify-center'>
           <h1 className='relative z-10 bg-gradient-to-b from-neutral-200 to-white bg-clip-text text-center font-sans text-2xl font-bold text-transparent md:text-3xl lg:text-5xl'>
             National Level Technical Symposium
           </h1>
@@ -46,7 +51,7 @@ const Hero = () => {
             Anna Univeristy
           </p>
         </div>
-        <Countdown />
+
         <span className='z-30 mx-auto inline-flex w-fit items-center justify-center gap-x-3 rounded-full border border-transparent bg-neutral-300 bg-gradient-to-tl from-blue-600 to-violet-600 px-2 py-1 text-center text-base font-medium text-white shadow-lg shadow-transparent hover:shadow-blue-700/50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-800 md:px-6 md:py-2.5 md:text-xl'>
           16 & 17 March 2024
         </span>

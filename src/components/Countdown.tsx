@@ -45,30 +45,30 @@ const Countdown = () => {
   }, [countDownDate]);
 
   return (
-    <div className='z-10 flex items-end justify-center text-white'>
+    <div className='flex items-center justify-center text-white'>
       <div className='m-2 sm:m-5'>
-        <span className='text-xl font-bold text-blue-600 sm:text-5xl'>
+        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
           {days}
         </span>
-        <p>Days</p>
+        <p className='flex w-full justify-center'>Days</p>
       </div>
       <div className='m-2 sm:m-5'>
-        <span className='text-xl font-bold text-blue-600 sm:text-5xl'>
+        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
           {hours}
         </span>
-        <p>Hours</p>
+        <p className='flex w-full justify-center'>Hours</p>
       </div>
       <div className='m-2 sm:m-5'>
-        <span className='text-xl font-bold text-blue-600 sm:text-5xl'>
+        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
           {minutes}
         </span>
-        <p>Minutes</p>
+        <p className='flex w-full justify-center'>Mins</p>
       </div>
       <div className='m-2 sm:m-5'>
-        <span className='text-xl font-bold text-blue-600 sm:text-5xl'>
+        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
           {seconds}
         </span>
-        <p>Seconds</p>
+        <p className='flex w-full justify-center'>Secs</p>
       </div>
     </div>
   );
