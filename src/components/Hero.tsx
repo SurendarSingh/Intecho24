@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className='pattern mx-auto flex min-h-screen flex-col items-center bg-slate-900 px-6'>
+    <div className='pattern mx-auto flex max-h-[50rem] min-h-screen flex-col items-center bg-slate-900 px-6'>
       <nav className='flex w-full max-w-7xl flex-row items-center justify-between py-6'>
         <Image
           className='h-16 w-auto sm:h-24'
@@ -28,7 +28,7 @@ const Hero = () => {
         />
       </nav>
 
-      <div className='flex flex-col items-center justify-center space-y-5 px-4 py-12 text-center md:px-8'>
+      <div className='my-auto flex flex-col items-center justify-center space-y-5 px-4 py-12 text-center md:px-8'>
         <div className='flex w-full flex-col items-center justify-center overflow-hidden'>
           <h1 className='bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-6xl font-extrabold uppercase text-transparent md:text-9xl'>
             Intecho 2024
