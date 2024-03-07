@@ -8,7 +8,7 @@ const OnClickButton = ({ link }: { link: string }) => {
       onClick={() => {
         window.open(link, '_blank');
       }}
-      className='mt-2 flex w-full items-center justify-center gap-x-3 rounded-lg border border-transparent bg-black px-8 py-1.5 text-sm text-white transition-colors duration-300 hover:bg-black/80 sm:text-base'
+      className='mt-2 flex w-full items-center justify-center gap-x-3 rounded-lg border border-transparent bg-blue-600 px-8 py-1.5 text-sm text-white transition-colors duration-300 hover:bg-blue-800 sm:text-base'
     >
       <span>Register Now</span>
     </button>

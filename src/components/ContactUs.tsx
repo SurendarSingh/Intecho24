@@ -62,8 +62,8 @@ const ContactUs = () => {
                 </svg>
                 <span className='mx-2 w-72'>
                   {' '}
-                  <span className='font-bold text-blue-500'>Events :</span>{' '}
-                  Rishi - 94440 28297
+                  <span className='font-bold text-gray-50'>Events :</span> Rishi
+                  - 94440 28297
                 </span>
               </p>
 
@@ -84,7 +84,7 @@ const ContactUs = () => {
                 </svg>
                 <span className='mx-2 w-72'>
                   {' '}
-                  <span className='font-bold text-blue-500'>
+                  <span className='font-bold text-gray-50'>
                     Workshops :
                   </span>{' '}
                   Rithika - 73056 06112
@@ -107,10 +107,10 @@ const ContactUs = () => {
                 </svg>
                 <span className='mx-2'>
                   {' '}
-                  <span className='font-bold text-blue-500'>
+                  <span className='font-bold text-gray-50'>
                     Accomodation :
                   </span>{' '}
-                  Zayed - 63693 72781
+                  63693 72781
                 </span>
               </p>
 
