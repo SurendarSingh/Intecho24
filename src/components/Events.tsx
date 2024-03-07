@@ -65,10 +65,56 @@ const TechnicalEvents = [
   },
 ];
 
+const Workshop = [
+  {
+    title: 'Embedded system design for IoT application',
+    image: '/Events/embedded-iot.jpeg',
+    description:
+      'The speaker of the workshop is Dr. S. Meyyappan, Deputy Director, CIoT, MIT campus, Anna university. The workshop has been split into two sessions. The topics that will be covered in the workshop are: 1) Embedded processors 2) IoT stack 3) IoT system design. Theoretical guidance will be given during the morning session. The attendees will be enable to have Hands-on session during the afternoon session.',
+    location: 'MIT',
+    link: 'https://docs.google.com/forms/d/1HrKO3KMy4JS3xnSZBcP4a8TD-XKndTqSmD9NT9rHnoQ/edit?usp=drivesdk',
+  },
+  {
+    title: 'Mechatronics',
+    image: '/Events/mechatronics.jpeg',
+    description:
+      'Workshop is organized in collaboration with Siemens Centre of Excellence, MIT Campus, Anna University. This one-day workshop has two sessions. During the morning session, attendees will pay visit to SCoE labs and witness demonstrations. Then, they will be introduced to the mechatronics. During the afternoon session, attendees will have a hands-on session of TIA software and discuss the following topics: use of TIA portal, sensor and actuators working, work stations, ladder logic and PLC.',
+    location: 'MIT',
+    link: 'https://docs.google.com/forms/d/1AsrQq-ccdsYvRmjB75zuPs3ZgyhScePNT0QITV7Y2o4/edit?usp=drivesdk',
+  },
+  {
+    title: 'Industrial Automation',
+    image: '/Events/industrial-automation.jpeg',
+    description:
+      'Workshop is organized in collaboration with Siemens Centre of Excellence, MIT Campus, Anna University. This one-day workshop has two sessions. During the morning session, attendees will pay visit to SCoE labs and witness demonstrations. Then, they will be introduced to the Industrial Automation. During the afternoon session, attendees will have a hands-on session of TIA portal, ladder logic, PLC with HMI.',
+    location: 'MIT',
+    link: 'https://docs.google.com/forms/d/1rLXGdyoyWVjERSODAWimYkMBXdGKwTyTl6KXkJGELRc/edit?usp=drivesdk',
+  },
+];
+
+const MitraEvent = [
+  {
+    title: 'All Terrain Robot',
+    image: '/Events/all-terrain-robot.jpeg',
+    description:
+      "From rugged soil to challenging mud and pebble tracks. Navigate the unknown, adapt to the unpredictable, and blaze a trail to victory as you race towards the finish line. It's a high-octane adventure where only the most versatile vehicles claim glory in the realm of all-terrain racing! Rules: 1) Each team can have a maximum of 4 members. 2) Event consist of one time trial based round.",
+    location: 'MIT',
+    link: 'https://docs.google.com/forms/d/1O7Y-IjJXPB7-e2vwxdNQ5c6tkG9Z5D4fSg1M3C3Zs64/edit?usp=drivesdk',
+  },
+  {
+    title: 'Robo Soccer',
+    image: '/Events/robo-soccer.jpeg',
+    description:
+      'Enter the Arena of Futuristic Soccer supremacy! Command your remote-controlled/ wired or wireless robot, to dominate the specially designed robotic soccer battleground. Score big, strategize smart, and outmaneuver your opponents to clinch victory. Rules: 1)	Team can have maximum number of 3 members. 2) Only one participant should control the robot no player can be exchanged in the middle of match. 3)	A robot can push or hit the ball. It cannot withhold or grab the ball. 4)	Decision of the Judges and Event Organizers shall be treated as final and binding on all and cannot be contested. 5) Positions of balls and obstacles in the arena will be decided by the organizers on the particular day of event.',
+    location: 'MIT',
+    link: 'https://docs.google.com/forms/d/1CurfFySmoWm1-meZleqkqk_3piwIE9OT2C6ydux1sNU/edit?usp=drivesdk',
+  },
+];
+
 const Events = () => {
   return (
     <section className='bg-white'>
-      <div className='container mx-auto px-6 pb-4 pt-12'>
+      <div className='container mx-auto px-6 pb-12 pt-24'>
         <h1 className='text-center text-4xl font-extrabold capitalize text-gray-800 md:text-6xl lg:text-7xl'>
           Technical Events
         </h1>
@@ -79,10 +125,10 @@ const Events = () => {
           <span className='inline-block h-1 w-1 rounded-full bg-blue-500'></span>
         </div>
 
-        <p className='mx-auto mt-4 max-w-2xl text-center text-gray-500'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt
-          ex placeat modi magni quia error alias, adipisci rem similique, at
-          omnis eligendi optio eos harum.
+        <p className='mx-auto mt-4 max-w-3xl text-center text-gray-500'>
+          The following technical events are conducted as a part of Intecho
+          2024. With over 30k worth of prizes and internship opportunities,
+          these events are sure to bring out the best in you.
         </p>
       </div>
 
@@ -192,6 +238,161 @@ const Events = () => {
 
                   <h1 className='px-2 text-sm'>{event.contact}</h1>
                 </div> */}
+                <OnClickButton link={event.link} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='container mx-auto px-6 pb-12 pt-24'>
+        <h1 className='text-center text-4xl font-extrabold capitalize text-gray-800 md:text-6xl lg:text-7xl'>
+          Workshop
+        </h1>
+
+        <div className='mx-auto mt-3 flex justify-center'>
+          <span className='inline-block h-1 w-40 rounded-full bg-orange-500'></span>
+          <span className='mx-1 inline-block h-1 w-3 rounded-full bg-orange-500'></span>
+          <span className='inline-block h-1 w-1 rounded-full bg-orange-500'></span>
+        </div>
+
+        <p className='mx-auto mt-4 max-w-3xl text-center text-gray-500'>
+          The following Workshops are conducted by Industry Experts and offered
+          by Siemens Centre of Excellence.
+        </p>
+      </div>
+
+      <div className='container mx-auto flex max-w-7xl justify-center px-6 py-6'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3'>
+          {Workshop.map((event, index) => (
+            <div
+              key={index}
+              className='w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg'
+            >
+              <Image
+                className='h-80 w-full object-cover object-center'
+                src={event.image}
+                alt='avatar'
+                priority
+                width={300}
+                height={200}
+              />
+
+              <div className='flex items-center bg-gray-900 px-6 py-3'>
+                <h1 className='mx-auto text-lg font-semibold text-white'>
+                  Workshop
+                </h1>
+              </div>
+
+              <div className='px-6 py-4'>
+                <h1 className='text-xl font-semibold text-gray-800'>
+                  {event.title}
+                </h1>
+
+                <p className='py-2 text-gray-700'>
+                  {event.description.substring(0, 100)}...
+                </p>
+
+                <div className='my-4 flex justify-between'>
+                  <div className='flex items-center text-gray-700'>
+                    <svg
+                      aria-label='location pin icon'
+                      className='h-6 w-6 fill-current'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.063 10.063 6.27214 12.2721 6.27214C14.4813 6.27214 16.2721 8.063 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16757 11.1676 8.27214 12.2721 8.27214C13.3767 8.27214 14.2721 9.16757 14.2721 10.2721Z'
+                      />
+                      <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M5.79417 16.5183C2.19424 13.0909 2.05438 7.3941 5.48178 3.79418C8.90918 0.194258 14.6059 0.0543983 18.2059 3.48179C21.8058 6.90919 21.9457 12.606 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.9732 6.93028 5.17326C9.59603 2.37332 14.0268 2.26454 16.8268 4.93029C19.6267 7.59604 19.7355 12.0269 17.0698 14.8268Z'
+                      />
+                    </svg>
+
+                    <h1 className='px-2 text-sm'>{event.location}</h1>
+                  </div>
+                </div>
+                <OnClickButton link={event.link} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='container mx-auto px-6 pb-12 pt-24'>
+        <h1 className='text-center text-4xl font-extrabold capitalize text-gray-800 md:text-6xl lg:text-7xl'>
+          Mitra Events
+        </h1>
+
+        <div className='mx-auto mt-3 flex justify-center'>
+          <span className='inline-block h-1 w-40 rounded-full bg-green-500'></span>
+          <span className='mx-1 inline-block h-1 w-3 rounded-full bg-green-500'></span>
+          <span className='inline-block h-1 w-1 rounded-full bg-green-500'></span>
+        </div>
+
+        {/* <p className='mx-auto mt-4 max-w-3xl text-center text-gray-500'></p> */}
+      </div>
+
+      <div className='container mx-auto flex max-w-7xl justify-center px-6 py-6'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3'>
+          {MitraEvent.map((event, index) => (
+            <div
+              key={index}
+              className='w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg'
+            >
+              <Image
+                className='h-80 w-full object-cover object-center'
+                src={event.image}
+                alt='avatar'
+                priority
+                width={300}
+                height={200}
+              />
+
+              <div className='flex items-center bg-gray-900 px-6 py-3'>
+                <h1 className='mx-auto text-lg font-semibold text-white'>
+                  MITRA
+                </h1>
+              </div>
+
+              <div className='px-6 py-4'>
+                <h1 className='text-xl font-semibold text-gray-800'>
+                  {event.title}
+                </h1>
+
+                <p className='py-2 text-gray-700'>
+                  {event.description.substring(0, 100)}...
+                </p>
+
+                <div className='my-4 flex justify-between'>
+                  <div className='flex items-center text-gray-700'>
+                    <svg
+                      aria-label='location pin icon'
+                      className='h-6 w-6 fill-current'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.063 10.063 6.27214 12.2721 6.27214C14.4813 6.27214 16.2721 8.063 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16757 11.1676 8.27214 12.2721 8.27214C13.3767 8.27214 14.2721 9.16757 14.2721 10.2721Z'
+                      />
+                      <path
+                        fillRule='evenodd'
+                        clipRule='evenodd'
+                        d='M5.79417 16.5183C2.19424 13.0909 2.05438 7.3941 5.48178 3.79418C8.90918 0.194258 14.6059 0.0543983 18.2059 3.48179C21.8058 6.90919 21.9457 12.606 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.9732 6.93028 5.17326C9.59603 2.37332 14.0268 2.26454 16.8268 4.93029C19.6267 7.59604 19.7355 12.0269 17.0698 14.8268Z'
+                      />
+                    </svg>
+
+                    <h1 className='px-2 text-sm'>{event.location}</h1>
+                  </div>
+                </div>
                 <OnClickButton link={event.link} />
               </div>
             </div>
