@@ -7,28 +7,21 @@ const ContactForm = () => {
   const [response, setResponse] = React.useState('');
 
   async function handleSubmit(e: any) {
-    setIsSubmitting(true);
     e.preventDefault();
+    setIsSubmitting(true);
     const formData = new FormData(e.target);
 
     formData.append('access_key', 'cdeeb002-da92-48e3-b1c6-858c90ef6dfc');
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: json,
+      body: formData,
     });
     const result = await response.json();
     if (result.success) {
-      setResponse('Message sent successfully');
+      setResponse('We have received your message!');
     } else {
-      setResponse('Failed to send message');
+      setResponse('Failed to send message. Please try again.');
     }
     setIsSubmitting(false);
   }
