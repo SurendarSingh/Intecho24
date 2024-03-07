@@ -6,9 +6,10 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [response, setResponse] = React.useState('');
 
-  async function handleSubmit(e: any) {
+  const onSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     const formData = new FormData(e.target);
 
     formData.append('access_key', 'cdeeb002-da92-48e3-b1c6-858c90ef6dfc');
@@ -20,14 +21,15 @@ const ContactForm = () => {
     const result = await response.json();
     if (result.success) {
       setResponse('We have received your message!');
+      e.target.reset();
     } else {
       setResponse('Failed to send message. Please try again.');
     }
     setIsSubmitting(false);
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit} className='mt-6'>
+    <form onSubmit={onSubmit} className='mt-6'>
       <div className='flex-1'>
         <label className='mb-2 block text-sm text-gray-600'>Name</label>
         <input
