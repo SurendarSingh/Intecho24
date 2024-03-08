@@ -45,30 +45,30 @@ const Countdown = () => {
   }, [countDownDate]);
 
   return (
-    <div className='flex items-center justify-center text-white'>
-      <div className='m-2 sm:m-5'>
-        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
+    <div className='flex w-full items-center justify-center text-center text-4xl md:text-6xl'>
+      <div className='mx-1 w-24 rounded-lg bg-gray-500/10 p-2 text-gray-300'>
+        <div className='font-mono leading-none' x-text='days'>
           {days}
-        </span>
-        <p className='flex w-full justify-center'>Days</p>
+        </div>
+        <div className='font-mono text-sm uppercase leading-none'>Days</div>
       </div>
-      <div className='m-2 sm:m-5'>
-        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
+      <div className='mx-1 w-24 rounded-lg bg-gray-500/10 p-2 text-gray-300'>
+        <div className='font-mono leading-none' x-text='hours'>
           {hours}
-        </span>
-        <p className='flex w-full justify-center'>Hours</p>
+        </div>
+        <div className='font-mono text-sm uppercase leading-none'>Hours</div>
       </div>
-      <div className='m-2 sm:m-5'>
-        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
+      <div className='mx-1 w-24 rounded-lg bg-gray-500/10 p-2 text-gray-300'>
+        <div className='font-mono leading-none' x-text='minutes'>
           {minutes}
-        </span>
-        <p className='flex w-full justify-center'>Mins</p>
+        </div>
+        <div className='font-mono text-sm uppercase leading-none'>Minutes</div>
       </div>
-      <div className='m-2 sm:m-5'>
-        <span className='flex justify-center text-xl font-bold text-blue-600 sm:text-5xl'>
+      <div className='mx-1 w-24 rounded-lg bg-gray-500/10 p-2 text-gray-300'>
+        <div className='font-mono leading-none' x-text='seconds'>
           {seconds}
-        </span>
-        <p className='flex w-full justify-center'>Secs</p>
+        </div>
+        <div className='font-mono text-sm uppercase leading-none'>Seconds</div>
       </div>
     </div>
   );
