@@ -7,21 +7,28 @@ const Hero = () => {
     <div className='pattern mx-auto flex min-h-screen flex-col items-center bg-slate-900 px-6'>
       <nav className='flex w-full max-w-7xl flex-row items-center justify-between py-6'>
         <Image
-          className='h-16 w-auto sm:h-24'
+          className='h-12 w-auto sm:h-24'
           src='/annauniv.png'
           alt='annauniv'
           width={100}
           height={100}
         />
         <Image
-          className='h-16 w-auto sm:h-24'
+          className='h-12 w-auto sm:h-24'
+          src='/mitlogo.png'
+          alt='mitlogo'
+          width={100}
+          height={100}
+        />
+        <Image
+          className='h-12 w-auto sm:h-24'
           src='/iea.png'
           alt='iea'
           width={100}
           height={100}
         />
         <Image
-          className='h-16 w-auto sm:h-24'
+          className='h-12 w-auto sm:h-24'
           src='/mit75.png'
           alt='mit75'
           width={100}
@@ -31,13 +38,22 @@ const Hero = () => {
 
       <Countdown />
 
-      <div className='my-auto flex flex-col items-center justify-center space-y-5 px-4 pb-20 text-center md:px-8'>
-        <div className='flex w-full flex-col items-center justify-center overflow-hidden'>
+      <div className='my-auto flex flex-col items-center justify-center space-y-5 pb-20 text-center'>
+        <div className='hidden w-full flex-col items-center justify-center overflow-hidden lg:flex'>
           <Image
-            src={'/intechoLogo-3.svg'}
+            src={'/intechoLogo.svg'}
             alt='Intecho Logo'
             width={1000}
             height={500}
+          />
+        </div>
+
+        <div className='flex w-full flex-col items-center justify-center overflow-hidden lg:hidden'>
+          <Image
+            src={'/intechoLogoMob.svg'}
+            alt='Intecho Logo'
+            width={1000}
+            height={1000}
           />
         </div>
 
@@ -45,7 +61,7 @@ const Hero = () => {
           <h1 className='relative z-10 bg-gradient-to-b from-neutral-200 to-white bg-clip-text text-center font-sans text-2xl font-bold text-transparent md:text-3xl lg:text-5xl'>
             National Level Technical Symposium
           </h1>
-          <p className='text-md mx-auto my-2 mt-4 max-w-xl text-base font-normal text-neutral-400 md:text-xl'>
+          <p className='text-md mx-auto my-2 mt-4 max-w-xl px-4 text-base font-normal text-neutral-400 md:text-xl'>
             by Department of Instrumentation Engineering, MIT Campus
             <br />
             Anna Univeristy
