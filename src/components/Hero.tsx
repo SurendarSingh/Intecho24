@@ -58,10 +58,10 @@ const Hero = () => {
         </div>
 
         <div className='mx-auto flex max-w-4xl flex-col items-center justify-center'>
-          <h1 className='relative z-10 bg-gradient-to-b from-neutral-200 to-white bg-clip-text text-center font-sans text-2xl font-bold text-transparent md:text-3xl lg:text-5xl'>
+          <h1 className='relative z-10 bg-gradient-to-b from-neutral-200 to-white bg-clip-text text-center font-sans text-2xl font-bold text-transparent md:text-4xl lg:text-5xl'>
             National Level Technical Symposium
           </h1>
-          <p className='text-md mx-auto my-2 mt-4 max-w-xl px-4 text-base font-normal text-neutral-400 md:text-xl'>
+          <p className='text-md mx-auto my-2 mt-4 max-w-xs text-base font-normal text-neutral-400 md:max-w-xl md:text-xl'>
             by Department of Instrumentation Engineering, MIT Campus
             <br />
             Anna Univeristy
