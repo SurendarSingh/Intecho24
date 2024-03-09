@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import OnClickButton from './OnClickButton';
 import ReadMore from './ReadMore';
+import Ticket from './Ticket';
 
 const TechnicalEvents = [
   {
@@ -112,6 +113,27 @@ const MitraEvent = [
   },
 ];
 
+const EventPass = [
+  {
+    title: '3 Event Pass',
+    code: '#01',
+    description: 'Register for any 3 Events and just Pay Rs. 300',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSciGm2z1DeXX2nQkrVpTyvH1qEsmMHd5YXQFR2K0zI0exRkRA/viewform?usp=sf_link',
+  },
+  {
+    title: '4 Event Pass',
+    code: '#02',
+    description: 'Register for any 4 Events and just Pay Rs. 400',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdQpL8n-IWFiPcVQN2QxW2SxjtFnLmrH2TnSkD1B7cVZuMm7g/viewform?usp=sf_link',
+  },
+  {
+    title: '5 Event Pass',
+    code: '#03',
+    description: 'Register for any 5 Events and just Pay Rs. 500',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeuvMG2dnPaFHKxB9rb8uIr2ITz4dtYvAnkQ1fU-NuQ7kw_nw/viewform?usp=sf_link',
+  },
+];
+
 const Events = () => {
   return (
     <section className='bg-white'>
@@ -131,6 +153,30 @@ const Events = () => {
           2024. With over 30k worth of prizes and internship opportunities,
           these events are sure to bring out the best in you.
         </p>
+      </div>
+
+      <h1 className='px-12 text-center text-2xl font-bold capitalize text-gray-800 md:text-4xl'>
+        Get Ready to grab your Event Pass
+        <Image
+          src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACUElEQVR4nO3av2sUQRTA8W8So/EQrAQJGIKVhZVaGtBK8y+kCSGFhUW0UizSpdQmqGAQf4AYkpCQhPzAqIWFWmmRvyCCkKiI14iVIw/ewbJcbndm97JvDh+85m53bz77ZnZ29haqi27gBvAZ+ARM6GdRRRfwAHCpfBwTRhAPmyCiwkgDn7RAuBgw0rCnORBOcxiD0QM890D8BvoxGIPAngdkCoOVEITEWaCeEzKEMcQLrYQgJD7khJzGSBwCXiYaJpX46NG1rmAEMduikdeByxljZsECYi7jbF/SbaW7fW+x3bV9fqMPOK8Ta1uiF5jP0W2SY+ZuxrbPgAvaeLlojAFf9LuZdkyavdod8o4BqcQ94IfHPq5JlooRxGKBxrwBxj3nGVc25jCwVPCsCgLtbnuBx7hVFLFcEJEeM6OBx/haBLFSAiKJEcRa4P7fQhBHgNUSEemsA9MZl+Z0ToYgQs9a3pz2HDPeg12u5ettRjitRGPMDLUDsXEACKcplbioE2BpiKPA5gEiXJOUu+ZfRRGvKka8T42ZIMRWxQinlWiMmVO+iBrw2gDCaUolBnwAFhEu5PFQTW/iqm64+48A3sZeiWPAOwMNT2bQGuNRJyDweGhmGiGxawBQyhP4OwYQpay7u4D7MVciGd16VtI/8hf4ab0SrTA7wAhwXL87AdzW/y1MI5Ld7JwupJqFLHb+WEfkjalOQEic6QRE40lK9IjGKi16BPqqRfSIk57zikmExNVOQPjczph+BSMvJgpEFiYqBBrS4JvAtqa8RFYZ4h+jA1y7Qw3GdgAAAABJRU5ErkJggg=='
+          alt='event-pass'
+          width={100}
+          height={100}
+          className='ml-2 inline-block h-8 w-8'
+        />
+      </h1>
+      <div className='container mx-auto flex max-w-7xl justify-center px-6 py-6'>
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3'>
+          {EventPass.map((event, index) => (
+            <Ticket
+              key={index}
+              title={event.title}
+              code={event.code}
+              description={event.description}
+              link={event.link}
+            />
+          ))}
+        </div>
       </div>
 
       <div className='container mx-auto flex max-w-7xl justify-center px-6 py-6'>
