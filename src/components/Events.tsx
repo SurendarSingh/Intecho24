@@ -97,7 +97,7 @@ const Workshop = [
 const MitraEvent = [
   {
     title: 'All Terrain Robot',
-    image: '/Events/all-terrain-robot.jpeg',
+    image: '/Events/all-terrain-robot.png',
     description:
       "From rugged soil to challenging mud and pebble tracks. Navigate the unknown, adapt to the unpredictable, and blaze a trail to victory as you race towards the finish line. It's a high-octane adventure where only the most versatile vehicles claim glory in the realm of all-terrain racing! Rules: 1) Each team can have a maximum of 4 members. 2) Event consist of one time trial based round.",
     location: 'MIT',
@@ -105,7 +105,7 @@ const MitraEvent = [
   },
   {
     title: 'Robo Soccer',
-    image: '/Events/robo-soccer.jpeg',
+    image: '/Events/robo-soccer.png',
     description:
       'Enter the Arena of Futuristic Soccer supremacy! Command your remote-controlled/ wired or wireless robot, to dominate the specially designed robotic soccer battleground. Score big, strategize smart, and outmaneuver your opponents to clinch victory. Rules: 1)	Team can have maximum number of 3 members. 2) Only one participant should control the robot no player can be exchanged in the middle of match. 3)	A robot can push or hit the ball. It cannot withhold or grab the ball. 4)	Decision of the Judges and Event Organizers shall be treated as final and binding on all and cannot be contested. 5) Positions of balls and obstacles in the arena will be decided by the organizers on the particular day of event.',
     location: 'MIT',
